@@ -44,7 +44,9 @@ p {
 .section-title span {
 	color: crimson;
 }
-
+span {
+	color: crimson;
+}
 .cta {
 	display: inline-block;
 	padding: 10px 30px;
@@ -423,7 +425,9 @@ p {
 	margin-bottom: 10px;
 }
 #about .col-right p {
+	margin-top: 20px;
 	margin-bottom: 20px;
+	color: black;
 }
 #about .col-right .cta {
 	color: black;
@@ -531,6 +535,7 @@ p {
 #footer p {
 	color: white;
 	font-size: 1.3rem;
+	text-align: center;
 }
 /* End Footer */
 
@@ -704,3 +709,61 @@ p {
 	}
 }
 /* End  Media Query For Desktop */
+
+
+/*Testimonial Section*/
+.testimonial{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+	cursor: pointer;
+}
+h1{
+    font-size: 50px;
+    font-weight: 600;
+}
+p{
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.testimonial-col{
+    flex-basis: 31%;
+    background: #f44336;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+	color: white;
+	font-size: large;
+}
+.testimonial-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+.testimonial-col img{
+    width: 50px;
+    margin-top: 15px;
+    border-radius: 50px;
+	height: 40px;
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+.fa{
+    color: #f44336;
+}
