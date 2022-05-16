@@ -265,7 +265,10 @@ span {
 #hero h1:nth-child(3) span {
 	animation-delay: 2.5s;
 }
-
+#hero .container1{
+	margin-top: 5px;
+	font-size: 20px;
+}
 /* End Hero Section */
 
 /* Services Section */
@@ -329,79 +332,6 @@ span {
 	text-align: left;
 }
 /* End Services Section */
-
-/* Projects section */
-#projects .projects {
-	flex-direction: column;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 100px 0;
-}
-#projects .projects-header h1 {
-	margin-bottom: 50px;
-}
-#projects .all-projects {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-}
-#projects .project-item {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	width: 80%;
-	margin: 20px auto;
-	overflow: hidden;
-	border-radius: 10px;
-}
-#projects .project-info {
-	padding: 30px;
-	flex-basis: 50%;
-	height: 100%;
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	flex-direction: column;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	color: white;
-}
-#projects .project-info h1 {
-	font-size: 4rem;
-	font-weight: 500;
-}
-#projects .project-info h2 {
-	font-size: 1.8rem;
-	font-weight: 500;
-	margin-top: 10px;
-}
-#projects .project-info p {
-	color: white;
-}
-#projects .project-img {
-	flex-basis: 50%;
-	height: 300px;
-	overflow: hidden;
-	position: relative;
-}
-#projects .project-img:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, white 100%);
-	opacity: 0.7;
-}
-#projects .project-img img {
-	transition: 0.3s ease transform;
-}
-#projects .project-item:hover .project-img img {
-	transform: scale(1.1);
-}
-/* End Projects section */
 
 /* About Section */
 #about .about {
@@ -507,6 +437,8 @@ span {
 	flex-direction: column;
 	padding-top: 50px;
 	padding-bottom: 10px;
+	align-items: center;
+	justify-content: center;
 }
 #footer h2 {
 	color: white;
@@ -536,6 +468,14 @@ span {
 	color: white;
 	font-size: 1.3rem;
 	text-align: center;
+}
+#footer .logo{
+	width: 100px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin: auto;
+	display: block;
 }
 /* End Footer */
 
@@ -597,24 +537,7 @@ span {
 	/* End Services Section */
 
 	/* Project */
-	#projects .project-item {
-		flex-direction: row;
-	}
-	#projects .project-item:nth-child(even) {
-		flex-direction: row-reverse;
-	}
-	#projects .project-item {
-		height: 400px;
-		margin: 0;
-		width: 100%;
-		border-radius: 0;
-	}
-	#projects .all-projects .project-info {
-		height: 100%;
-	}
-	#projects .all-projects .project-img {
-		height: 100%;
-	}
+
 	/* End Project */
 
 	/* About */
@@ -750,6 +673,9 @@ h3{
 	color: white;
 	font-size: large;
 }
+.fa{
+	color: #f44336;
+}
 .testimonial-col:hover{
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 }
@@ -766,4 +692,82 @@ h3{
 }
 .fa{
     color: #f44336;
+}
+#projects .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#projects .col-3{
+    flex-basis: 5%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+#projects .col-3 img{
+    width: 100%;
+	filter: grayscale(50%);
+	cursor: pointer;
+	border-radius: 10px;
+	padding: 5px;
+}
+#projects .col-3 img:hover{
+	box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+	filter: grayscale(0%);
+}
+#projects .small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+#projects h1{
+	font-size: 50px;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+@Media only screen and (max-width: 600px){
+	#projects .col-3 img{
+		flex-basis: 100%;
+	}
+}
+
+/*------------Contact Section-------*/
+.contact-col{
+    flex-basis: 100%;
+    margin-bottom: 30px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.contact-col h4{
+	font-size: 25px;
+	margin-top: 15px;
+}
+.contact-col input, .contact-col textarea{
+    width: 50%;
+    padding: 15px;
+	margin: 5px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', sans-serif;
+    background: lightgray;
+    color: #f44336;
+	box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+.contact-col input::placeholder, .contact-col textarea::placeholder{
+    color: #000;
+}
+.contact-col .cta{
+	color: #000000;
+	margin-top: -5px;
+}
+@media only screen and (max-width:600px) {
+	.contact-col input, .contact-col textarea{
+		width: 100%;
+		flex-basis: 100%;
+	}
 }
