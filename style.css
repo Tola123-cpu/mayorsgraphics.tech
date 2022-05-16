@@ -439,6 +439,7 @@ span {
 	padding-bottom: 10px;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
 }
 #footer h2 {
 	color: white;
